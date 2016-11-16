@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>简易计算器</title>
+		<link rel="stylesheet" type="text/css" href="./02.css">
+		<style></style>
+	</head>
+	<body>
+		<div id="main">
+			<div id="btns4">
+			<input type="text" id="res1" autocomplete="off" placeholder="请输入数字" />
+			<select id="res3">
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+			</select>
+			<input type="text" id="res2" autocomplete="off" placeholder="请输入数字" />
+			</div>
+			<div id="btns2">
+				<button onclick="clearRes(this)" class="menu1">AC</button>
+				
+				<button onclick="calculator()" class="menu2">=</button>
+			</div>
+			<div class="clear"></div>
+			<div id="btns3"></div>
+		</div>
+	<body>
+  <script type="text/javascript" src="./02.js"></script>
+</html>
