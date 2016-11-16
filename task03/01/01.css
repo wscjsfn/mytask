@@ -1,0 +1,16 @@
+body{
+	margin:0;
+	padding:0;
+}
+div{
+	margin:0 auto;
+	padding:0;
+	width:610px;
+	margin-top:100px;
+}
+input{	
+	text-align:center;
+	width:90px;
+	height:40px;
+	font-size:30px;	
+}

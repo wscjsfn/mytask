@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8' />
+		<title>隔行换色</title>		
+		<style></style>
+	</head>
+	<body>
+		<table id="tb" border="1" width="500px" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>星期一</td>
+				<td>星期二</td>
+				<td>星期三</td>
+				<td>星期四</td>
+				<td>星期五</td>
+			</tr>		
+			<tr>
+				<td>语文</td>
+				<td>数学</td>
+				<td>英语</td>
+				<td>政治</td>
+				<td>物理</td>
+			</tr>
+			<tr>			
+				<td>数学</td>
+				<td>数学</td>
+				<td>化学</td>
+				<td>历史</td>
+				<td>生物</td>				
+			</tr>
+			<tr>			
+				<td>历史</td>
+				<td>英语</td>
+				<td>政治</td>
+				<td>生物</td>
+				<td>地理</td>				
+			</tr>
+			<tr>			
+				<td>历史</td>
+				<td>外语</td>
+				<td>政治</td>
+				<td>生物</td>
+				<td>地理</td>				
+			</tr>
+			<tr>
+				<td>物理</td>
+				<td>语文</td>
+				<td>物理</td>
+				<td>音乐</td>
+				<td>体育</td>			
+			</tr>
+			<tr>			
+				<td>物理</td>
+				<td>语文</td>
+				<td>物理</td>
+				<td>音乐</td>
+				<td>体育</td>
+			</tr>		
+		</table>
+	</body>
+	<script>
+		window.onload = function showtable(){
+			var a = document.getElementById("tb").getElementsByTagName("tr");
+			for (var i = 0; i <= a.length; i++){
+				if (i % 2 == 0){
+					a[i].style.backgroundColor = "#336699";
+				}
+				else{
+					a[i].style.backgroundColor = "#aabbcc";
+				}
+			}
+		}
+	</script>
+</html>
