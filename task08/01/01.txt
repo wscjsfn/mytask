@@ -1,0 +1,33 @@
+mysql -h localhost -u root -p root	//连接数据库
+
+show databases;		//展示所有库
+
+create database if not exists wsc;	//创建名为wsc的数据库
+
+use wsc;		//使用名为wsc的这个库
+
+show tables;		//展示wsc库中的所有表
+
+create table if not exists t_students(		//创建名为t_students的表
+	stu_id int unsigned not null auto_increment primary key,	//无符号，整型，非空，自增，主键
+	stu_name varchar(50) not null,	//字符串
+	stu_age int unsigned not null,
+	stu_gender enum('男','女') not null default '男',	//default表示默认
+	stu_adress varchar(100) not null,
+	index stu_name_index(stu_name),
+	index stu_age_index(stu_age)		//设置常规索引
+	)engine=myisam default charset=utf8;	//设置引擎，和字符集
+
+desc t_students;	//查看表的字段
+
+alter table t_students change stu_gender stu_sex enum('男','女') not null default '女';	//修改字段名和属性
+
+insert into t_students(stu_id,stu_name,stu_age,stu_sex,stu_adress) value('01','zhaokong','16','男','江苏徐州');		//插入一条信息
+
+insert into t_students(stu_id,stu_name,stu_age,stu_sex,stu_adress) values('02','qiansan','14','男','江苏宿迁'),('03','sunxin','13','女','江苏淮安'),('04','liyu','15','女','江苏盐城'),('05','zhouhou','14','女','江苏扬州'),('06','wuming','14','男','江苏镇江'),('07','zhenyue','14','女','江苏常州'),('08','wangsong','16','女','江苏苏州'),('09','fengjian','13','男','江苏无锡');		//多条语句插入
+
+select * from t_students;	//查看整张表的数据
+
+select stu_name from t_students where stu_age>15 and stu_sex='男';	//查询年龄大于15的男生
+
+delete from t_students where stu_sex='男';	//删除男生
