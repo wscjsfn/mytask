@@ -1,0 +1,4 @@
+ab:3
+dog:3
+cat:2
+monkey:2
